@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Details</title>
+    <link rel="stylesheet" href="emi-details.css">
+    <script src="emi-details.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>EMI Details</h1>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="emi-summary">
+            <h2>Loan Summary</h2>
+            <table>
+                <tr>
+                    <th>Total Loan Amount</th>
+                    <td>₹500,000</td>
+                </tr>
+                <tr>
+                    <th>Interest Rate</th>
+                    <td>7.5%</td>
+                </tr>
+                <tr>
+                    <th>Total Loan Tenure</th>
+                    <td>5 years</td>
+                </tr>
+                <tr>
+                    <th>EMI Amount</th>
+                    <td>₹10,000</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="emi-schedule">
+            <h2>EMI Payment Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Due Date</th>
+                        <th>EMI Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="emi-schedule">
+                    <!-- Dynamic content populated by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="payment-history">
+            <h2>Payment History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Payment Date</th>
+                        <th>Amount Paid</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="payment-history">
+                    <!-- Dynamic content populated by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="payment-options">
+            <h2>Make Payment</h2>
+            <button onclick="makePayment()">Pay Now</button>
+        </section>
+    </main>
+</body>
+</html>

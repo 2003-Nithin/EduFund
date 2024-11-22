@@ -4,22 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banker Dashboard</title>
-    <link rel="stylesheet" href="../common/styles/common.css">
-    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
-        <h2>Banker Dashboard</h2>
+        <div class="navbar">
+            <img src="assets/images/logo.png" alt="Logo" class="logo">
+            <h1>Banker Dashboard</h1>
+            <button onclick="logout()">Logout</button>
+        </div>
     </header>
+
     <main>
-        <section>
-            <h3>Loan Verification</h3>
-            <p>Review pending requests and approve/disburse loans.</p>
+        <section class="dashboard">
+            <h2>Welcome, Banker</h2>
+
+            <!-- Loan Application Verification -->
+            <div class="section">
+                <h3>Loan Application Verification</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Student Name</th>
+                            <th>CGPA</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="loan-requests">
+                        <!-- Dynamic rows inserted here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Loan Status Overview -->
+            <div class="section">
+                <h3>Loan Status Overview</h3>
+                <div id="loan-status-chart" class="chart-container"></div>
+            </div>
+
+            <!-- Repayment Tracking -->
+            <div class="section">
+                <h3>Repayment Tracking</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Loan ID</th>
+                            <th>EMI Status</th>
+                            <th>Due Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="repayment-tracking">
+                        <!-- Dynamic rows inserted here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Notifications -->
+            <div class="section">
+                <h3>Notifications</h3>
+                <ul id="notifications">
+                    <!-- Dynamic notifications inserted here -->
+                </ul>
+            </div>
+
+            <!-- Analytics -->
+            <div class="section">
+                <h3>Analytics</h3>
+                <div id="analytics-chart" class="chart-container"></div>
+            </div>
+
+            <!-- Performance Monitoring -->
+            <div class="section">
+                <h3>Performance Monitoring</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>CGPA</th>
+                            <th>Backlogs</th>
+                        </tr>
+                    </thead>
+                    <tbody id="performance-monitoring">
+                        <!-- Dynamic rows inserted here -->
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Student Financing Platform</p>
+        <p>&copy; 2024 Student Financing Platform. All Rights Reserved.</p>
     </footer>
-    <script src="scripts/dashboard.js"></script>
+
+    <script src="dashboard-scripts.js"></script>
 </body>
 </html>

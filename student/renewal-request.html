@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Renewal Application</title>
+    <link rel="stylesheet" href="renewal-request.css">
+    <script src="renewal-request.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Loan Renewal Request</h1>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="eligibility-check">
+            <h2>Eligibility Check</h2>
+            <p>Please review the eligibility criteria before applying for renewal.</p>
+            <ul>
+                <li>Repayment history: No overdue EMIs</li>
+                <li>Minimum CGPA of 6.0 or higher</li>
+                <li>No active backlogs</li>
+            </ul>
+        </section>
+
+        <section class="renewal-form">
+            <h2>Apply for Loan Renewal</h2>
+            <form id="renewal-form">
+                <label for="course-name">Updated Course Name:</label>
+                <input type="text" id="course-name" name="course-name" required>
+                
+                <label for="loan-amount">Requested Loan Amount:</label>
+                <input type="number" id="loan-amount" name="loan-amount" required>
+                
+                <label for="document-upload">Upload Updated Documents (if any):</label>
+                <input type="file" id="document-upload" name="document-upload">
+                
+                <button type="submit" id="submit-renewal">Submit Renewal Request</button>
+            </form>
+        </section>
+
+        <section class="status">
+            <h2>Renewal Status</h2>
+            <p id="status-message">You will be notified about the renewal status after submission.</p>
+        </section>
+    </main>
+</body>
+</html>
