@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Welcome, [Student Name]</h1>
+    <nav>
+      <ul>
+        <li><a href="#loan-status">Loan Status</a></li>
+        <li><a href="#eligibility-check">Eligibility Check</a></li>
+        <li><a href="#apply-loan">Apply for Loan</a></li>
+        <li><a href="#emi-management">EMI Management</a></li>
+        <li><a href="#docs">Documents</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Dashboard Content -->
+  <main>
+    <!-- Loan Eligibility Section -->
+    <section id="loan-status">
+      <h2>Your Loan Status</h2>
+      <div>
+        <p>Eligibility Status: <strong>Eligible/Not Eligible</strong></p>
+        <p>Your Loan Amount: ₹[Loan Amount]</p>
+        <p>Status: <strong>Pending/Approved</strong></p>
+      </div>
+    </section>
+
+    <!-- Eligibility Check Section -->
+    <section id="eligibility-check">
+      <h2>Check Loan Eligibility</h2>
+      <button onclick="checkEligibility()">Check Eligibility</button>
+      <div id="eligibility-result"></div>
+    </section>
+
+    <!-- Apply for Loan Section -->
+    <section id="apply-loan">
+      <h2>Apply for a Loan</h2>
+      <form id="loan-application">
+        <label for="certificate-upload">Upload Your 10th and 12th Certificates:</label>
+        <input type="file" id="certificate-upload" accept=".pdf, .jpg, .png">
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <!-- EMI Management Section -->
+    <section id="emi-management">
+      <h2>Manage Your EMI</h2>
+      <button onclick="openEmiCalculator()">Calculate EMI</button>
+      <div id="emi-calculator"></div>
+      <div id="emi-status">
+        <p>Upcoming EMI: ₹[Amount]</p>
+        <p>Status: <strong>Paid/Pending</strong></p>
+      </div>
+    </section>
+
+    <!-- Document Storage Section -->
+    <section id="docs">
+      <h2>Your Documents</h2>
+      <div id="document-storage">
+        <p><strong>Your 10th Certificate:</strong> <button>View</button></p>
+        <p><strong>Your 12th Certificate:</strong> <button>View</button></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Student Financing Platform</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

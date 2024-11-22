@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Loan - Student Loan Platform</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Apply for a Loan</h1>
+  </header>
+
+  <section class="loan-application">
+    <form id="loanForm">
+      <label for="marksheet">Upload 10th/12th Marksheets:</label>
+      <input type="file" id="marksheet" required>
+
+      <label for="loanAmount">Loan Amount:</label>
+      <input type="number" id="loanAmount" placeholder="Enter loan amount" required>
+
+      <button type="submit">Submit Application</button>
+
+      <button onclick="window.location.href='emi-details.html';"">EMIdetails</button>
+
+      <button id="submitclass" onclick="success()";>Submit</button>
+
+      
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Student Loan Platform. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the College Dashboard</h1>
+        <button onclick="window.location.href='/college-login.html'">Logout</button>
+    </header>
+
+    <main>
+        <section>
+            <h2>Loan Applications</h2>
+            <table id="loan-applications">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Loan Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be dynamically populated here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Student Academic Data</h2>
+            <p>Select a student to view their academic progress.</p>
+            <select id="student-selector">
+                <option value="">Select a student</option>
+                <!-- Student options will be populated dynamically -->
+            </select>
+        </section>
+
+        <section>
+            <h2>Fee Status</h2>
+            <table id="fee-status">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Fees Paid</th>
+                        <th>Fees Due</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fee data will be populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Student Financing Platform</p>
+    </footer>
+
+    <script src="js/college-dashboard.js"></script>
+</body>
+</html>
