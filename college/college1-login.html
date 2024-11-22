@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Portal</title>
+    <link rel="stylesheet" href="styles/college-portal.css">
+    <script src="scripts/college-portal.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>College Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#student-requests">Student Requests</a></li>
+                <li><a href="#loans">Loans</a></li>
+                <li><a href="#student-data">Student Data</a></li>
+                <li><a href="#certificate-verification">Certificate Verification</a></li>
+                <li><a href="#fees">Fee Management</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Student Requests Section -->
+        <section id="student-requests">
+            <h2>Student Requests</h2>
+            <p>View and manage loan requests from students.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Loan ID</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="requestTable">
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Loans Section -->
+        <section id="loans">
+            <h2>Loans</h2>
+            <p>Monitor ongoing and completed loans for students.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loan ID</th>
+                        <th>Student Name</th>
+                        <th>Status</th>
+                        <th>Repayment Status</th>
+                    </tr>
+                </thead>
+                <tbody id="loansTable">
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Student Data Section -->
+        <section id="student-data">
+            <h2>Student Data</h2>
+            <p>Access student academic performance records.</p>
+            <button onclick="openModal('addStudent')">Add New Student</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>CGPA</th>
+                        <th>Backlogs</th>
+                        <th>Certificates</th>
+                    </tr>
+                </thead>
+                <tbody id="studentDataTable">
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Certificate Verification Section -->
+        <section id="certificate-verification">
+            <h2>Certificate Verification</h2>
+            <p>Verify availability and authenticity of certificates.</p>
+            <button onclick="openModal('verifyCertificates')">Verify Certificates</button>
+        </section>
+
+        <!-- Fee Management Section -->
+        <section id="fees">
+            <h2>Fee Management</h2>
+            <p>Monitor tuition fees paid and pending for students.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Fees Paid</th>
+                        <th>Fees Due</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="feesTable">
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Student Financing Platform</p>
+    </footer>
+
+    <!-- Modals for Dynamic Actions -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="admin-portal.css">
+    <script src="admin-portal.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Admin Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#user-management">User Management</a></li>
+                <li><a href="#loan-monitoring">Loan Monitoring</a></li>
+                <li><a href="#analytics">Performance Analytics</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#audit-logs">Audit Logs</a></li>
+                <li><a href="#content-management">Content Management</a></li>
+                <li><a href="#secure-docs">Secure Document Management</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- User Management Section -->
+        <section id="user-management">
+            <h2>User Management</h2>
+            <p>View, edit, and manage users including students, parents, colleges, and bankers.</p>
+            <button onclick="openModal('addUser')">Add New User</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Loan Monitoring Section -->
+        <section id="loan-monitoring">
+            <h2>Loan Monitoring</h2>
+            <p>Track loan requests, statuses, and repayment histories.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loan ID</th>
+                        <th>Student Name</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="loanTable">
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Performance Analytics Section -->
+        <section id="analytics">
+            <h2>Performance Analytics</h2>
+            <p>Generate insights into loan disbursement, repayment success rates, and student performance metrics.</p>
+            <canvas id="analyticsChart" width="400" height="200"></canvas>
+        </section>
+
+        <!-- Notifications Section -->
+        <section id="notifications">
+            <h2>Notifications Management</h2>
+            <p>Send notifications and reminders for EMIs, pending approvals, or academic warnings.</p>
+            <button onclick="openModal('sendNotification')">Send Notification</button>
+        </section>
+
+        <!-- Audit Logs Section -->
+        <section id="audit-logs">
+            <h2>Audit Logs</h2>
+            <p>Maintain a record of all activities on the platform for accountability.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>User</th>
+                        <th>Date & Time</th>
+                    </tr>
+                </thead>
+                <tbody id="auditLogsTable">
+                    <!-- Dynamically populated -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Content Management Section -->
+        <section id="content-management">
+            <h2>Content Management</h2>
+            <p>Update FAQs, help sections, and other website content.</p>
+            <button onclick="openModal('updateContent')">Update Content</button>
+        </section>
+
+        <!-- Secure Document Management Section -->
+        <section id="secure-docs">
+            <h2>Secure Document Management</h2>
+            <p>Store, retrieve, and protect uploaded student certificates.</p>
+            <button onclick="openModal('viewDocs')">View Documents</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Student Financing Platform</p>
+    </footer>
+
+    <!-- Modals for Dynamic Actions -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
